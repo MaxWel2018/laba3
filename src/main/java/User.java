@@ -48,8 +48,10 @@ public class User {
         }
 
         public Builder withEmail(String email) {
-            if (email != null) this.email = email;
-            else this.email = "";
+            if (email != null)
+                this.email = email;
+            else
+                this.email = "";
             return this;
         }
 
