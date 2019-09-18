@@ -32,29 +32,43 @@ public class User {
         }
 
         public Builder withName(String name) {
-            this.name = name;
+            if (name != null)
+                this.name = name;
+            else
+                this.name = "";
             return this;
         }
 
-        public Builder withSurname(String surname) {
-            this.surname = surname;
+        Builder withSurname(String surname) {
+            if (surname != null)
+                this.surname = surname;
+            else
+                this.surname = "";
             return this;
         }
 
         public Builder withEmail(String email) {
-            this.email = email;
+            if (email != null) this.email = email;
+            else this.email = "";
             return this;
         }
 
         public Builder withPassword(String password) {
-            this.password = password;
+            if (password != null)
+                this.password = password;
+            else
+                this.password = "";
             return this;
         }
 
         public Builder withCode(int code) {
-            this.code = code;
+            if (code > 0)
+                this.code = code;
+            else
+                this.code = 0;
             return this;
         }
+
     }
 
     public String getName() {
